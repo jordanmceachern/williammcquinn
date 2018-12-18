@@ -32,63 +32,7 @@ body {
     justify-content: space-evenly
 }
 
-#footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 175px
-}
-
-#footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: var(--main-font-color, black);
-    text-decoration: none;
-    padding-right: 5px;
-    font-size: 20px
-}
-
-#footer a img {
-    height: 50px;
-    width: 50px;
-}
-
-#fb {
-    margin: 7px 7px;
-    height: 36px !important;
-    width: 36px !important
-}
-
-#buyDiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px !important;
-    width: 50px !important;
-    background: rgba(0,0,0,0.5);
-    border-radius: 5px
-}
-
-#buy {
-    text-decoration: none;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-#buy p {
-    height: 34px;
-    line-height: 1.2;
-    text-align: center;
-    color: white
-}
-
-#header {
+nav {
     position: fixed;
     z-index: 2;
     opacity: 1;
@@ -103,13 +47,23 @@ body {
 }
 
 #home {
-    line-height: 0.8;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     text-decoration: none;
     color: inherit;
-    padding-bottom: 5px;
+    width: 90px
+}
+
+#home p {
+    line-height: 1;
+    font-size: 20px;
+    text-align: center;
     width: 75px
 }
+
+#home:hover {background: rgba(0,0,0,0.1)}
 
 .heading {
     text-decoration: none;
@@ -117,14 +71,37 @@ body {
     width: 75px;
     height: 50px;
     font-size: 20px;
-    padding: 0 5px;
     display: flex !important;
     justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--main-bg-color, white)
+    align-items: center
 }
 
 .heading:hover {background: rgba(0,0,0,0.1)}
+
+#facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 175px
+}
+
+#facebook a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--main-font-color, black);
+    text-decoration: none;
+    font-size: 20px
+}
+
+#fb {
+    margin: 12px 5px;
+    height: 26px !important;
+    width: 26px !important
+}
 
 #hamburger {display: none}
 .hideThis {display: unset}
@@ -133,26 +110,32 @@ body {
     .hideThis {display: none !important}
 
     #home {
-        padding-bottom: unset;
-        height: 40px;
+        height: 50px;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center
+        justify-content: center;
+        border-bottom: 1px solid var(--main-font-color, black)
     }
 
-    #header {
+    #home:hover {background: unset}
+    #home:active {background: rgba(0,0,0,0.1)}
+    .heading:hover {background: unset}
+    .heading:active {background: rgba(0,0,0,0.1)}
+    #facebook:hover {background: unset}
+    #facebook:active {background: rgba(0,0,0,0.1)}
+
+    nav {
         top: 0;
         height: unset;
+        min-height: 50px;
         flex-direction: column;
-        box-shadow: unset;
         border-bottom: 1px solid var(--main-font-color, black)
     }
 
     .heading {
         width: 100%;
-        height: 100%;
-        padding: 5px 0 5px 0;
-        font-size: 20px;
+        height: 50px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -163,6 +146,7 @@ body {
         display: flex;
         flex-direction: column;
         position: absolute;
+        top: 5px;
         left: 10px;
         justify-content: space-evenly;
         align-items: center;
@@ -173,11 +157,17 @@ body {
         border: 1px solid var(--main-font-color, black);
         border-radius: 3px
     }
+
     #hamburger hr {
         width: 25px;
         height: 2px;
         border-radius: 2px;
         background: var(--main-font-color, black);
         margin: 0
+    }
+
+    #facebook {
+        border-bottom: none !important;
+        width: 100%
     }
 }
