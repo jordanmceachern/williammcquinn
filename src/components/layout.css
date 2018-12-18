@@ -1,18 +1,8 @@
 * { margin: 0; padding: 0}
 
 @font-face {
-    font-family: "ogirema";
-    src: url("./ogirema/Ogirema.ttf")
-}
-
-@font-face {
-    font-family: "ogirema-bold";
-    src: url("./ogirema/OgiremaBold.ttf")
-}
-
-@font-face {
-    font-family: "ogirema-italic";
-    src: url("./ogirema/OgiremaItalic.ttf")
+    font-family: "roboto";
+    src: url("./roboto/RobotoCondensed-Regular.ttf")
 }
 
 ::-webkit-scrollbar {
@@ -21,7 +11,7 @@
 }
 
 body {
-    font-family: "ogirema", sans-serif;
+    font-family: "roboto", sans-serif;
     --main-font-color: black;
     --main-bg-color: white;
     color: var(--main-font-color, black);
@@ -43,25 +33,28 @@ body {
 }
 
 #footer {
-    z-index: 2;
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
-    width: 100%;
-    bottom: 0;
-    background: rgba(0,0,0,0.5)
+    width: 175px
 }
 
-#footer .links {
+#footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--main-font-color, black);
+    text-decoration: none;
+    padding-right: 5px;
+    font-size: 20px
+}
+
+#footer a img {
     height: 50px;
     width: 50px;
-}
-
-#footer .links a, #footer .links a img {
-    width: 100%;
-    height: 100%
 }
 
 #fb {
@@ -122,17 +115,16 @@ body {
     text-decoration: none;
     color: inherit;
     width: 75px;
-    height: 30px;
+    height: 50px;
     font-size: 20px;
+    padding: 0 5px;
     display: flex !important;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--main-bg-color, white)
 }
 
-.heading:hover, .heading:focus {
-    box-shadow: 0 4px 2px -4px var(--main-font-color, black)
-}
+.heading:hover {background: rgba(0,0,0,0.1)}
 
 #hamburger {display: none}
 .hideThis {display: unset}

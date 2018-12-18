@@ -20,44 +20,14 @@ render(){
                         <hr />
                         <hr />
                     </div>
-                    <Link id="home" to="/">brittany mcquinn</Link>
+                    <a id="home" href="#">william mcquinn</a>
                 </div>
-                <Link id="story" className="heading mobile hideThis" to="/story" onClick={this.toggleHandler}>story</Link>
-                <Link id="lyrics" className="heading mobile hideThis" to="/lyrics" onClick={this.toggleHandler}>lyrics</Link>
-                <Link id="shows" className="heading mobile hideThis" to="/shows" onClick={this.toggleHandler}>shows</Link>
-                <Link id="contact" className="heading mobile hideThis" to="/contact" onClick={this.toggleHandler}>contact</Link>
-            </div>
-
-            <div id="footer">
-                <div className="links">
+                <div id="footer" className="heading mobile hideThis" onClick={this.toggleHandler}>
                     <a 
-                    href="https://www.facebook.com/williammcquinn7" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                        <img id="fb" src={facebook} alt="link to facebook"/>Facebook Page
-                    </a>
-                </div>
-                <div className="links">
-                    <a 
-                    href="https://www.instagram.com/brittanymcquinn/?hl=en" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                        <img src={instagram} alt="link to instagram"/>
-                    </a>
-                </div>
-                <div className="links">
-                    <a 
-                    href="https://twitter.com/brittanymcquinn" 
-                    target="_blank" rel="noopener noreferrer">
-                        <img src={twitter} alt="link to twitter"/>
-                    </a>
-                </div>
-                <div className="links" id="buyDiv">
-                    <a 
-                    href="https://fanlink.to/BrittanyMcQuinn" 
-                    target="_blank" rel="noopener noreferrer"
-                    id="buy">
-                        <p>stream/ buy</p>
+                        href="https://www.facebook.com/williammcquinn7" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                        <img id="fb" src={facebook} alt="link to facebook"/>facebook page
                     </a>
                 </div>
             </div>
