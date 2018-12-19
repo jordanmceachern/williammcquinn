@@ -1,8 +1,8 @@
 * { margin: 0; padding: 0}
 
 @font-face {
-    font-family: "roboto";
-    src: url("./roboto/RobotoCondensed-Regular.ttf")
+    font-family: "noto-serif";
+    src: url("./Noto_Serif/NotoSerif-Regular.ttf")
 }
 
 ::-webkit-scrollbar {
@@ -11,9 +11,9 @@
 }
 
 body {
-    font-family: "roboto", sans-serif;
+    font-family: "noto-serif", serif;
     --main-font-color: black;
-    --main-bg-color: white;
+    --main-bg-color: rgb(200,200,200);
     color: var(--main-font-color, black);
     background: var(--main-bg-color, white);
     overflow: hidden;
@@ -53,22 +53,15 @@ nav {
     height: 100%;
     text-decoration: none;
     color: inherit;
-    width: 90px
+    width: 200px
 }
 
-#home p {
-    line-height: 1;
-    font-size: 20px;
-    text-align: center;
-    width: 75px
-}
-
-#home:hover {background: rgba(0,0,0,0.1)}
+#home img {width: 200px}
 
 .heading {
     text-decoration: none;
     color: inherit;
-    width: 75px;
+    width: 85px;
     height: 50px;
     font-size: 20px;
     display: flex !important;
@@ -83,7 +76,7 @@ nav {
     justify-content: center;
     align-items: center;
     height: 50px;
-    width: 175px
+    width: 190px
 }
 
 #facebook a {
@@ -118,8 +111,6 @@ nav {
         border-bottom: 1px solid var(--main-font-color, black)
     }
 
-    #home:hover {background: unset}
-    #home:active {background: rgba(0,0,0,0.1)}
     .heading:hover {background: unset}
     .heading:active {background: rgba(0,0,0,0.1)}
     #facebook:hover {background: unset}
