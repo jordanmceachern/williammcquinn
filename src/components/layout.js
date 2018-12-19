@@ -21,6 +21,7 @@ render(){
             <a id="home" href="#top"><p>William McQuinn</p></a>
             <a className="heading mobile hideThis" href="#photos">photos</a>
             <a className="heading mobile hideThis" href="#videos">videos</a>
+            <a className="heading mobile hideThis" href="#contact">contact</a>
             <div id="facebook" className="heading mobile hideThis" onClick={this.toggleHandler}>
                 <a 
                     href="https://www.facebook.com/williammcquinn7" 
