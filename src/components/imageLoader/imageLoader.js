@@ -1,7 +1,7 @@
 import React from 'react'
 import './imageLoader.css'
-import svg from './brittany.svg'
-import jpg from './brittany.jpg'
+import svg from './filming.svg'
+import jpg from './filming.jpg'
 
 class ImageLoader extends React.Component {
   state={

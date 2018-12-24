@@ -1,4 +1,6 @@
 .background {
+    position: fixed;
+    overflow: hidden;
     height: 100vh;
     width: 100%;
     transform: translate(0,50px)

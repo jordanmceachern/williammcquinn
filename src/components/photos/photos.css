@@ -1,0 +1,22 @@
+#photos {
+    margin-top: 50px;
+    height: 0;
+    min-height: min-content;
+    overflow-x: visible;
+    overflow-y: hidden;
+    display: none; /*flex*/
+    justify-content: center
+}
+
+#photos div {
+    height: 0;
+    min-height: min-content;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#photos div img {
+    width: 100%
+}
