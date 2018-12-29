@@ -100,7 +100,7 @@ nav {
 #hamburger {display: none}
 .hideThis {display: unset}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 620px) {
     .hideThis {display: none !important}
 
     #home {

@@ -1,27 +1,66 @@
 import React from 'react'
 import './imageLoader.css'
 import svg from './filming.svg'
-import jpg from './filming.jpg'
+import c1 from './filming.jpg'
+import c2 from './carousel_1.jpg'
+import c3 from './carousel_2.jpg'
+import c4 from './carousel_3.jpg'
+import c5 from './carousel_4.jpg'
+import c6 from './carousel_5.jpg'
 
 class ImageLoader extends React.Component {
   state={
-    loadFirst: false
+    loadFirst: false,
+    slideIndex: 0
+  }
+
+  slides = null
+  setSlides = element => {
+    this.slides = element
+    if(this.slides){
+      this.carousel()
+    }
   }
 
   componentDidMount(){
     const img = new Image()
-    img.src = jpg
+    img.src = c1
     img.onload = () => {this.setState({loadFirst: true})}
+  }
+
+  carousel = () => {
+    const x = document.querySelectorAll('.slides')
+    const arr = Array.from(x)
+    let i = 0
+    setInterval(() => {
+      arr.forEach(photo => {
+        photo.style.display = "none"
+      })
+      arr[i].style.display = "unset"
+      i++
+      if(i>5){i=0}
+    }, 3500)
   }
   
   render(){
-    const src = 
-    this.state.loadFirst ? jpg : svg
+    if(this.state.loadFirst){
+      var src = <div id="jpg" ref={this.setSlides}>
+                  <img src={c1} className="slides" alt="of william filming"/>
+                  <img src={c2} className="slides" alt="of william filming"/>
+                  <img src={c3} id="editing" className="slides" alt="of william filming"/>
+                  <img src={c4} id="camera" className="slides" alt="of william filming"/>
+                  <img src={c5} className="slides" alt="of william filming"/>
+                  <img src={c6} className="slides" alt="of william filming"/>
+                </div>
+    } else {
+        src = <div id="svg">
+                <img src={svg} alt="background loading" />
+              </div>
+    }
     return (
-          <div 
-            className="background"
-            style={{background: `center / cover no-repeat url(${src})`}}>
-          </div>
+      <div id="container">
+        {src}
+      </div>
     )
   }
 }
