@@ -5,6 +5,15 @@ import facebook from './facebook.png'
 import logo from './logo.jpg'
 
 class Layout extends Component {
+state = {
+    logoLoaded: false
+}
+
+componentDidMount(){
+    const img = new Image()
+    img.src = logo
+    img.onload = () => {this.setState({logoLoaded: true})}
+}
 
 toggleHandler = () => {
     const navhtml = document.getElementsByClassName("mobile")
@@ -13,6 +22,9 @@ toggleHandler = () => {
 }
     
 render(){
+    let logoPlaceHolder = "W. McQuinn Videography"
+    if(this.state.logoLoaded){logoPlaceHolder = <img src={logo} alt="brand logo"/>}
+
     return (
         <nav>
             <div id="hamburger" onClick={this.toggleHandler}>
@@ -20,7 +32,7 @@ render(){
                 <hr />
                 <hr />
             </div>
-            <Link id="home" to="/"><img src={logo} alt="brand logo"/></Link>
+            <Link id="home" to="/">{logoPlaceHolder}</Link>
             <Link className="heading mobile hideThis" to="/photos">photos</Link>
             <a className="heading mobile hideThis" href="#videos">videos</a>
             <a className="heading mobile hideThis" href="#contact">contact</a>
