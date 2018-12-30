@@ -4,9 +4,8 @@ import svg from './filming.svg'
 import c1 from './filming.jpg'
 import c2 from './carousel_1.jpg'
 import c3 from './carousel_2.jpg'
-import c4 from './carousel_3.jpg'
-import c5 from './carousel_4.jpg'
-import c6 from './carousel_5.jpg'
+import c4 from './carousel_4.jpg'
+import c5 from './carousel_5.jpg'
 
 class ImageLoader extends React.Component {
   state={
@@ -38,7 +37,7 @@ class ImageLoader extends React.Component {
       })
       arr[i].style.display = "unset"
       i++
-      if(i>5){i=0}
+      if(i>arr.length-1){i=0}
     }, 3500)
   }
   
@@ -48,9 +47,8 @@ class ImageLoader extends React.Component {
                   <img src={c1} className="slides" alt="of william filming"/>
                   <img src={c2} className="slides" alt="of william filming"/>
                   <img src={c3} id="editing" className="slides" alt="of william filming"/>
-                  <img src={c4} id="camera" className="slides" alt="of william filming"/>
+                  <img src={c4} className="slides" alt="of william filming"/>
                   <img src={c5} className="slides" alt="of william filming"/>
-                  <img src={c6} className="slides" alt="of william filming"/>
                 </div>
     } else {
         src = <div id="svg">
