@@ -30,7 +30,6 @@ class ImageLoader extends React.Component {
   carousel = () => {
     const x = document.querySelectorAll('.slides')
     const arr = Array.from(x)
-    console.log(arr[4])
     let i = 0
     setInterval(() => {
       arr.forEach(photo => {
