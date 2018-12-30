@@ -30,6 +30,7 @@ class ImageLoader extends React.Component {
   carousel = () => {
     const x = document.querySelectorAll('.slides')
     const arr = Array.from(x)
+    console.log(arr[4])
     let i = 0
     setInterval(() => {
       arr.forEach(photo => {
@@ -45,10 +46,10 @@ class ImageLoader extends React.Component {
     if(this.state.loadFirst){
       var src = <div id="jpg" ref={this.setSlides}>
                   <img src={c1} className="slides" alt="of william filming"/>
-                  <img src={c2} className="slides" alt="of william filming"/>
-                  <img src={c3} id="editing" className="slides" alt="of william filming"/>
-                  <img src={c4} className="slides" alt="of william filming"/>
-                  <img src={c5} className="slides" alt="of william filming"/>
+                  <img src={c2} style={{display: "none"}} className="slides" alt="of william filming"/>
+                  <img src={c3} style={{display: "none"}} id="editing" className="slides" alt="of william filming"/>
+                  <img src={c4} style={{display: "none"}} className="slides" alt="of william filming"/>
+                  <img src={c5} style={{display: "none"}} className="slides" alt="of william filming"/>
                 </div>
     } else {
         src = <div id="svg">

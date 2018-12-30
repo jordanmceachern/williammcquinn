@@ -22,7 +22,7 @@ toggleHandler = () => {
 }
     
 render(){
-    let logoPlaceHolder = "W. McQuinn Videography"
+    let logoPlaceHolder = "William McQuinn"
     if(this.state.logoLoaded){logoPlaceHolder = <img src={logo} alt="brand logo"/>}
 
     return (
