@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/photos/photos.css'
+import '../css_pages/photos.css'
 import Layout from '../components/layout'
 import bridge from '../components/photos/bridge.jpg'
 import car from '../components/photos/car.jpg'

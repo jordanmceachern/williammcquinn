@@ -35,7 +35,7 @@ render(){
             <Link id="home" to="/">{logoPlaceHolder}</Link>
             <Link className="heading mobile hideThis" to="/photos">photos</Link>
             <a className="heading mobile hideThis" href="#videos">videos</a>
-            <a className="heading mobile hideThis" href="#contact">contact</a>
+            <Link className="heading mobile hideThis" to="/contact">contact</Link>
             <div id="facebook" className="heading mobile hideThis" onClick={this.toggleHandler}>
                 <a 
                     href="https://www.facebook.com/williammcquinn7" 

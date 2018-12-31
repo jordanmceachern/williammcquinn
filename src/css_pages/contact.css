@@ -1,0 +1,38 @@
+#contactInfo {
+    overflow-y: scroll;
+    margin: 50px 0 0 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black
+}
+
+#contactInfo div {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#contactInfo div p {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    text-align: center
+}
+
+#contactInfo div p a {
+    text-decoration: none;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center
+}
+
+#contactInfo div p a:hover {
+    box-shadow: 0 4px 4px -4px red
+}
