@@ -17,14 +17,20 @@ state = {
 }
 
 changeLeft = () => {
-    console.log("left")
-    //let photos = this.state.photos
-    //rearrange photosArr
-    //setState { photos }
+    let photos = this.state.photos
+    const indexLength = photos.length-1
+    const last = photos[indexLength]
+    photos.pop()
+    photos.splice(0, 0, last)
+    this.setState({ photos })
 }
 
 changeRight = () => {
-    console.log("right")
+    let photos = this.state.photos
+    const first = photos[0]
+    photos.push(first)
+    photos.splice(0, 1)
+    this.setState({ photos })
 }
     
 render(){
@@ -32,9 +38,9 @@ render(){
         <div className="App">
             <Layout />
             <div id="photos">
-                <div onClick={this.changeLeft}><img src={this.state.photos[0]} alt="gallery left" /></div>
-                <div><img src={this.state.photos[1]} alt="gallery center" /></div>
-                <div onClick={this.changeRight}><img src={this.state.photos[2]} alt="gallery right" /></div>
+                <img onClick={this.changeLeft} src={this.state.photos[0]} alt="gallery left" />
+                <img src={this.state.photos[1]} alt="gallery center" />
+                <img onClick={this.changeRight} src={this.state.photos[2]} alt="gallery right" />
             </div>
         </div>
     )}
