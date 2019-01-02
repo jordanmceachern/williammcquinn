@@ -1,9 +1,10 @@
 import React from 'react'
 import '../css_pages/photos.css'
 import Layout from '../components/layout'
+import arrow from '../components/arrow_select.png'
 import bridge from '../components/photos/bridge.jpg'
 import car from '../components/photos/car.jpg'
-import cockpit from '../components/photos/cockpit.jpg'
+import canyon from '../components/photos/canyon.jpg'
 import falls from '../components/photos/falls.jpg'
 import girl from '../components/photos/girl.jpg'
 import horse from '../components/photos/horse.jpg'
@@ -13,7 +14,7 @@ import water from '../components/photos/water.jpg'
 
 class Photos extends React.Component {
 state = {
-    photos: [bridge, car, cockpit, falls, girl, horse, plains, plane, water]
+    photos: [bridge, car, canyon, falls, girl, horse, plains, plane, water]
 }
 
 changeLeft = () => {
@@ -38,9 +39,22 @@ render(){
         <div className="App">
             <Layout />
             <div id="photos">
-                <img onClick={this.changeLeft} src={this.state.photos[0]} alt="gallery left" />
+                <img id="leftPic" src={this.state.photos[0]} alt="gallery left" />
                 <img src={this.state.photos[1]} alt="gallery center" />
-                <img onClick={this.changeRight} src={this.state.photos[2]} alt="gallery right" />
+                <img id="rightPic" src={this.state.photos[2]} alt="gallery right" />
+            </div>
+            <div id="gallery">
+                <div className="arrows" onClick={this.changeLeft}>
+                    <img src={arrow} alt="cycle left" />
+                </div>
+                <div id="select">
+                    <hr />
+                    <hr />
+                    <hr />
+                </div>
+                <div className="arrows" onClick={this.changeRight}>
+                    <img src={arrow} id="cycleRight" alt="cycle right" />
+                </div>
             </div>
         </div>
     )}
