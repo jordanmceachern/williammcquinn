@@ -2,19 +2,20 @@ import React from 'react'
 import '../css_pages/photos.css'
 import Layout from '../components/layout'
 import arrow from '../components/arrow_select.png'
-import bridge from '../components/photos/bridge.jpg'
 import car from '../components/photos/car.jpg'
 import canyon from '../components/photos/canyon.jpg'
 import falls from '../components/photos/falls.jpg'
 import girl from '../components/photos/girl.jpg'
-import horse from '../components/photos/horse.jpg'
-import plains from '../components/photos/plains.jpg'
 import plane from '../components/photos/plane.jpg'
-import water from '../components/photos/water.jpg'
+import bunny from '../components/photos/bunny.jpg'
+import piano from '../components/photos/piano.jpg'
+import building from '../components/photos/building.jpg'
+import jet from '../components/photos/jet.jpg'
+import rock from '../components/photos/rock.jpg'
 
 class Photos extends React.Component {
 state = {
-    photos: [bridge, car, canyon, falls, girl, horse, plains, plane, water]
+    photos: [bunny, girl, car, canyon, piano, falls, rock, building, jet, plane]
 }
 
 changeLeft = () => {
