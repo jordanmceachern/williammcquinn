@@ -6,7 +6,7 @@
     transform: translate(0,50px)
 }
 
-#jpg, #svg {
+#jpg, #light {
     position: fixed;
     overflow: hidden;
     height: 100vh;
@@ -17,7 +17,7 @@
     justify-content: center
 }
 
-#container #jpg .slides, #container #svg img {
+#container #jpg .slides, #container #light img {
     position: fixed;
     overflow: hidden;
     height: 100vh;

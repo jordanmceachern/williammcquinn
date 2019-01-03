@@ -6,10 +6,6 @@
     justify-content: center
 }
 
-#photos img {
-    width: auto
-}
-
 #cycleRight {transform: rotate(180deg)}
 
 #gallery {
@@ -25,11 +21,11 @@
     background-color: rgba(0,0,0,0.2)
 }
 
-#gallery arrows {
+#gallery .arrows {
     display: flex;
     align-items: center;
-    width: min-content;
-    height: min-content
+    width: auto;
+    height: 40px
 }
 
 #gallery div img {

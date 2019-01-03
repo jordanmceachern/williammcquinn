@@ -1,6 +1,6 @@
 import React from 'react'
 import './imageLoader.css'
-import svg from './filming.svg'
+import jpglight from './filminglight.jpg'
 import c1 from './filming.jpg'
 import c2 from './carousel_1.jpg'
 import c3 from './carousel_2.jpg'
@@ -38,7 +38,7 @@ class ImageLoader extends React.Component {
       arr[i].style.display = "unset"
       i++
       if(i>arr.length-1){i=0}
-    }, 3500)
+    }, 2500)
   }
   
   render(){
@@ -51,8 +51,8 @@ class ImageLoader extends React.Component {
                   <img src={c5} style={{display: "none"}} className="slides" alt="of william filming"/>
                 </div>
     } else {
-        src = <div id="svg">
-                <img src={svg} alt="background loading" />
+        src = <div id="light">
+                <img src={jpglight} alt="background loading" />
               </div>
     }
     return (
