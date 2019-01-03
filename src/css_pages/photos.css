@@ -8,7 +8,7 @@
 
 #cycleRight {transform: rotate(180deg)}
 
-#gallery {
+#galleryMenu {
     display: flex;
     position: absolute;
     margin: 0 auto;
@@ -21,17 +21,27 @@
     background-color: rgba(0,0,0,0.2)
 }
 
-#gallery .arrows {
+#galleryMenu .arrows {
     display: flex;
     align-items: center;
     width: auto;
     height: 40px
 }
 
-#gallery div img {
+#galleryMenu div img {
     height: 40px;
     width: 45px
 }
+
+#galleryMenu div hr {
+    width: 27px;
+    height: 2px;
+    border-radius: 2px;
+    background: red;
+    margin: 0
+}
+
+.show {display: none}
 
 #select {
     height: 40px;
@@ -42,12 +52,16 @@
     align-items: center
 }
 
-#gallery div hr {
-    width: 27px;
-    height: 2px;
-    border-radius: 2px;
-    background: red;
-    margin: 0
+#gallery {
+    position: absolute;
+    bottom: 50px;
+    height: 80px;
+    width: 300px
+}
+
+#gallery img {
+    height: 40px;
+    width: 60px
 }
 
 @media only screen and (max-width: 620px) {
@@ -66,11 +80,11 @@
 
     #leftPic, #rightPic {display: none}
 
-    #gallery {bottom: 5%}
+    #galleryMenu {bottom: 5%}
     
     #select {transform: rotate(-90deg)}
 }
 
 @media only screen and (max-height: 600px) {
-    #gallery {bottom: 0}
+    #galleryMenu {bottom: 0}
 }

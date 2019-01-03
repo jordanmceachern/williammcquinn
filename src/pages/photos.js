@@ -59,8 +59,15 @@ changeRight = () => {
     photos.splice(0, 1)
     this.setState({ photos })
 }
+
+showGallery = () => {
+    const gallery = document.getElementById("gallery")
+    gallery.classList.toggle("show")
+    console.log(gallery.classList)
+}
     
 render(){
+
     return (
         <div className="App">
             <Layout />
@@ -70,10 +77,22 @@ render(){
                 <img id="rightPic" src={this.state.photos[2]} alt="gallery right" />
             </div>
             <div id="gallery">
+                <img src={this.state.photos[0]} alt="thumbnail" />
+                <img src={this.state.photos[1]} alt="thumbnail" />
+                <img src={this.state.photos[2]} alt="thumbnail" />
+                <img src={this.state.photos[3]} alt="thumbnail" />
+                <img src={this.state.photos[4]} alt="thumbnail" />
+                <img src={this.state.photos[5]} alt="thumbnail" />
+                <img src={this.state.photos[6]} alt="thumbnail" />
+                <img src={this.state.photos[7]} alt="thumbnail" />
+                <img src={this.state.photos[8]} alt="thumbnail" />
+                <img src={this.state.photos[9]} alt="thumbnail" />
+            </div>
+            <div id="galleryMenu">
                 <div className="arrows" onClick={this.changeLeft}>
                     <img src={arrow} alt="cycle left" />
                 </div>
-                <div id="select">
+                <div id="select" onClick={this.showGallery}>
                     <hr />
                     <hr />
                     <hr />
