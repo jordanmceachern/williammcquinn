@@ -60,13 +60,37 @@ changeRight = () => {
     this.setState({ photos })
 }
 
+changeMain = key => () => {
+    const gallery = document.getElementById("gallery")
+    gallery.classList.toggle("hide")
+    let photos = this.state.photos
+    
+    if(key === 0){
+        this.changeLeft()
+    } else if(key === 1) {
+        return
+    } else {
+        const number = key-2
+        for(var i=0; i<=number; i++){
+            const move = photos[0]
+            photos.push(move)
+            photos.splice(0, 1)
+            this.setState({ photos })
+        }
+    }
+}
+
 showGallery = () => {
     const gallery = document.getElementById("gallery")
-    gallery.classList.toggle("show")
-    console.log(gallery.classList)
+    gallery.classList.toggle("hide")
 }
     
 render(){
+    let j = -1
+    const thumbnails = this.state.photos.map(photo => {
+        j++
+        return <img key={`${j}`} src={photo} alt="thumbnail" onClick={this.changeMain(j)}/>
+    })
 
     return (
         <div className="App">
@@ -76,17 +100,8 @@ render(){
                 <img id="mainpic" src={this.state.photos[1]} alt="gallery center" />
                 <img id="rightPic" src={this.state.photos[2]} alt="gallery right" />
             </div>
-            <div id="gallery">
-                <img src={this.state.photos[0]} alt="thumbnail" />
-                <img src={this.state.photos[1]} alt="thumbnail" />
-                <img src={this.state.photos[2]} alt="thumbnail" />
-                <img src={this.state.photos[3]} alt="thumbnail" />
-                <img src={this.state.photos[4]} alt="thumbnail" />
-                <img src={this.state.photos[5]} alt="thumbnail" />
-                <img src={this.state.photos[6]} alt="thumbnail" />
-                <img src={this.state.photos[7]} alt="thumbnail" />
-                <img src={this.state.photos[8]} alt="thumbnail" />
-                <img src={this.state.photos[9]} alt="thumbnail" />
+            <div id="gallery" className="hide">
+                {thumbnails}
             </div>
             <div id="galleryMenu">
                 <div className="arrows" onClick={this.changeLeft}>
