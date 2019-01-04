@@ -87,26 +87,28 @@
         overflow-y: scroll
     }
 
-    #photos img {
+    /* #photos img {
         transform: rotate(-90deg);
         height: 100vw;
         width: 150vw
-    }
+    } */
 
     #leftPic, #rightPic {display: none}
-    #galleryMenu {bottom: 30px}
-    #select {transform: rotate(-90deg)}
+    /* #galleryMenu {bottom: 30px} */
+    /* #select {transform: rotate(-90deg)} */
 
     #gallery {
-        transform: rotate(-90deg);
-        bottom: 205px
+        /* transform: rotate(-90deg);
+        bottom: 205px */
+
+        height: 225px;
+        width: 135px;
     }
 }
 
-@media only screen and (max-height: 480px) {
+/* @media only screen and (max-height: 480px) {
     #galleryMenu {bottom: 0}
     #gallery {
-        transform: rotate(-90deg);
         bottom: 175px
     }
-}
+} */
