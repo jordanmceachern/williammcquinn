@@ -86,29 +86,13 @@
         justify-content: center;
         overflow-y: scroll
     }
-
-    /* #photos img {
-        transform: rotate(-90deg);
-        height: 100vw;
-        width: 150vw
-    } */
-
+    
     #leftPic, #rightPic {display: none}
-    /* #galleryMenu {bottom: 30px} */
-    /* #select {transform: rotate(-90deg)} */
+}
 
+@media only screen and (max-width: 374px) {
     #gallery {
-        /* transform: rotate(-90deg);
-        bottom: 205px */
-
         height: 225px;
         width: 135px;
     }
 }
-
-/* @media only screen and (max-height: 480px) {
-    #galleryMenu {bottom: 0}
-    #gallery {
-        bottom: 175px
-    }
-} */
