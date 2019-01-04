@@ -1,38 +1,42 @@
 #about {
-    overflow-y: scroll;
-    margin: 50px 0 0 0;
-    height: 100%;
-    width: 100%;
+    margin-top: 50px;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background-color: black
 }
 
-#about div {
-    height: 40px;
+#about p {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-#about div p {
-    width: 100%;
-    height: 100%;
+    height: min-content;
     font-size: 20px;
-    text-align: center
+    margin-top: 10px
 }
 
-#about div p a {
+#about p a {
     text-decoration: none;
     height: 30px;
     color: white;
     font-size: 20px;
-    text-align: center
+    display: inline-block;
+    margin-left: 10px
 }
 
-#about div p a:hover {
-    box-shadow: 0 4px 4px -4px red
+#about p a div {width: min-content}
+
+#about p a div:hover {box-shadow: 0 4px 4px -4px var(--main-font-color, white)}
+
+@media only screen and (max-width: 705px) {
+    #about {
+        width: 90%;
+        justify-content: unset
+    }
+    #about p a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: unset
+    }
 }

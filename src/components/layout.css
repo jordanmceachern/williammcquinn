@@ -13,10 +13,10 @@
 
 body {
     font-family: "noto-serif", serif;
-    --main-font-color: black;
-    --main-bg-color: rgb(200,200,200);
-    color: var(--main-font-color, black);
-    background: black;
+    --main-font-color: white;
+    --main-bg-color: rgb(20,20,20);
+    color: var(--main-font-color, white);
+    background-color: black;
     height: 100vh;
     width: 100vw
 }
@@ -45,22 +45,22 @@ nav {
     background: var(--main-bg-color, white)
 }
 
+nav a {color: var(--main-font-color, white)}
+
 #home {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: inherit;
+    color: var(--main-font-color, white);
     width: 200px;
     font-size: 18px
 }
 
 #home img {width: 200px; height: unset}
-#home img:hover, #home img:active {box-shadow: 0 0 2px 2px red}
 
 .heading {
     text-decoration: none;
-    color: inherit;
     width: 85px;
     height: 50px;
     font-size: 18px;
@@ -69,7 +69,7 @@ nav {
     align-items: center
 }
 
-.heading:hover, .heading:active {background: rgba(256,0,0,0.3)}
+.heading:hover, .heading:active {background: rgba(256,256,256,0.15)}
 
 #facebook {
     display: flex;
@@ -99,7 +99,7 @@ nav {
 #hamburger {display: none}
 .hideThis {display: unset}
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 705px) {
     .hideThis {display: none !important}
 
     #home {
