@@ -26,6 +26,8 @@
     background-color: rgba(0,0,0,0.6)
 }
 
+#videoMenu:hover {cursor: pointer}
+
 #videoMenu .arrows {
     display: flex;
     align-items: center;
@@ -36,14 +38,6 @@
 #videoMenu div img {
     height: 40px;
     width: 45px
-}
-
-#videoMenu div hr {
-    width: 27px;
-    height: 2px;
-    border-radius: 2px;
-    background: white;
-    margin: 0
 }
 
 .hide {display: none !important}
@@ -67,6 +61,8 @@
     z-index: 2;
     background-color: rgba(0,0,0,0.6)
 }
+
+#gal:hover {cursor: pointer}
 
 #gal li {
     display: flex;

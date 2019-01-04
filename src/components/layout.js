@@ -33,6 +33,7 @@ render(){
                 <hr />
             </div>
             <Link id="home" to="/">{logoPlaceHolder}</Link>
+            <Link className="heading mobile hideThis" to="/aboutme">about me</Link>
             <Link className="heading mobile hideThis" to="/photos">photos</Link>
             <Link className="heading mobile hideThis" to="/videos">videos</Link>
             <Link className="heading mobile hideThis" to="/contact">contact</Link>

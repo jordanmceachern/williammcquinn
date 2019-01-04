@@ -97,10 +97,10 @@ render(){
             <Layout />
             <div id="photos">
                 <img id="leftPic" src={this.state.photos[0]} alt="gallery left" />
-                <img id="mainpic" src={this.state.photos[1]} alt="gallery center" />
+                <img id="mainPic" className="leftBlur rightBlur" src={this.state.photos[1]} alt="gallery center" />
                 <img id="rightPic" src={this.state.photos[2]} alt="gallery right" />
             </div>
-            <div id="gallery" className="hide">
+            <div id="gallery" className="hide outline">
                 {thumbnails}
             </div>
             <div id="galleryMenu">
@@ -108,9 +108,7 @@ render(){
                     <img src={arrow} alt="cycle left" />
                 </div>
                 <div id="select" onClick={this.showGallery}>
-                    <hr />
-                    <hr />
-                    <hr />
+                    see more
                 </div>
                 <div className="arrows" onClick={this.changeRight}>
                     <img src={arrow} id="cycleRight" alt="cycle right" />

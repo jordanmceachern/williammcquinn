@@ -108,9 +108,7 @@ render(){
                     <img src={arrow} alt="cycle left" />
                 </div>
                 <div id="select" onClick={this.showGallery}>
-                    <hr />
-                    <hr />
-                    <hr />
+                    see more
                 </div>
                 <div className="arrows" onClick={this.changeRight}>
                     <img src={arrow} id="cycleRight" alt="cycle right" />

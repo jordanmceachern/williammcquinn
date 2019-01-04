@@ -3,8 +3,18 @@
     width: 100%;
     overflow-x: hidden;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    align-items: center
 }
+
+#leftPic, #rightPic {
+    height: 90%;
+    z-index: 0
+}
+
+.leftBlur {box-shadow: -10px 0 100px 10px black}
+.rightBlur {box-shadow: 10px 0 100px 10px black}
+#mainPic {z-index: 1}
 
 #cycleRight {transform: rotate(180deg)}
 
@@ -16,9 +26,10 @@
     justify-content: space-evenly;
     align-items: center;
     height: 40px;
-    width: 160px;
+    width: 130px;
     padding: 4px;
-    background-color: rgba(0,0,0,0.2)
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2
 }
 
 #galleryMenu .arrows {
@@ -33,13 +44,7 @@
     width: 45px
 }
 
-#galleryMenu div hr {
-    width: 27px;
-    height: 2px;
-    border-radius: 2px;
-    background: white;
-    margin: 0
-}
+#galleryMenu:hover {cursor: pointer}
 
 .hide {display: none !important}
 
@@ -47,9 +52,12 @@
     height: 40px;
     width: 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+    flex-wrap: wrap;
+    line-height: 1
 }
 
 #gallery {
@@ -61,6 +69,10 @@
     flex-wrap: wrap;
     z-index: 2
 }
+
+#gallery:hover {cursor: pointer}
+
+.outline {box-shadow: 0 0 30px 2px black}
 
 #gallery img {
     height: 45px;
