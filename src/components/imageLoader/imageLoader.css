@@ -1,30 +1,28 @@
-#container {
-    position: fixed;
-    overflow: hidden;
-    height: 100vh;
+#landing {
+    margin-top: 50px;
     width: 100%;
-    transform: translate(0,50px)
-}
-
-#jpg, #light {
-    position: fixed;
-    overflow: hidden;
-    height: 100vh;
-    width: 100%;
-    list-style: none;
-    background: black;
+    overflow-x: hidden;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    align-items: center
 }
 
-#container #jpg .slides, #container #light img {
-    position: fixed;
-    overflow: hidden;
-    height: 100vh;
-    width: auto;
-    background: center / cover no-repeat
+#leftPicture, #rightPicture {
+    height: 90%;
+    z-index: 0
 }
 
-@media only screen and (max-width: 620px) {
-    #editing {transform: translate(-10%,0)}
+.leftBlurr {box-shadow: -10px 0 100px 10px black}
+.rightBlurr {box-shadow: 10px 0 100px 10px black}
+#mainPicture {z-index: 1}
+
+@media only screen and (max-width: 1024px) {
+    #landing {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll
+    }
+    
+    #leftPicture, #rightPicture {display: none}
 }
