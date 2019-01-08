@@ -25,7 +25,9 @@ import rocklight from '../components/photos/rocklight.jpg'
 
 class Photos extends React.Component {
 state = {
-    photos: [bunnylight, girllight, carlight, canyonlight, pianolight, fallslight, rocklight, buildinglight, jetlight, planelight]
+    photos: [bunnylight, girllight, carlight, canyonlight, pianolight, fallslight, rocklight, buildinglight, jetlight, planelight],
+    loaded: false,
+    jpg: []
 }
 
 componentDidMount(){
@@ -37,7 +39,10 @@ componentDidMount(){
         img.src = jpeg
         img.onload = () => {
             photos[i] = jpeg
-            this.setState({ photos })
+            this.setState({ jpg: photos })
+            if(this.state.jpg.length === jpg.length){
+                this.setState({loaded: true})
+            }
             i++
         }
     })
@@ -91,6 +96,7 @@ render(){
         j++
         return <img key={`${j}`} src={photo} alt="thumbnail" onClick={this.changeMain(j)}/>
     })
+    const seeMore = (this.state.loaded === true)? "show all":"loading..."
 
     return (
         <div className="App">
@@ -100,7 +106,7 @@ render(){
                 <img id="mainPic" className="leftBlur rightBlur" src={this.state.photos[1]} alt="gallery center" />
                 <img id="rightPic" src={this.state.photos[2]} alt="gallery right" />
             </div>
-            <div id="gallery" className="hide outline">
+            <div id="gallery" className="outline">
                 {thumbnails}
             </div>
             <div id="galleryMenu">
@@ -108,7 +114,7 @@ render(){
                     <img src={arrow} alt="cycle left" />
                 </div>
                 <div id="select" onClick={this.showGallery}>
-                    see more
+                    {seeMore}
                 </div>
                 <div className="arrows" onClick={this.changeRight}>
                     <img src={arrow} id="cycleRight" alt="cycle right" />
