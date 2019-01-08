@@ -8,7 +8,7 @@
 }
 
 #leftPicture, #rightPicture {
-    height: 80vh;
+    height: 80%;
     z-index: 0
 }
 
