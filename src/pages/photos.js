@@ -99,7 +99,7 @@ render(){
     const seeMore = (this.state.loaded === true)? "show all": "load- ing..."
 
     return (
-        <div className="App">
+        <div className="Stills">
             <Layout />
             <div id="photos">
                 <img id="leftPic" src={this.state.photos[0]} alt="gallery left" />
