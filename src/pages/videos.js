@@ -57,9 +57,9 @@ changeMain = key => () => {
     if(key === 0){
         return
     } else if(key === 1) {
-        this.changeLeft()
+        this.changeRight()
     } else {
-        const number = key-2
+        const number = key-1
         for(var i=0; i<=number; i++){
             const move = videos[0]
             const moveTitle = title[0]
