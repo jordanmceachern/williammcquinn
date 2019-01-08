@@ -8,13 +8,18 @@
 }
 
 #leftPicture, #rightPicture {
-    height: 80%;
+    height: 80vh;
+    width: 106.6vh;
     z-index: 0
 }
 
 .leftBlurr {box-shadow: -10px 0 100px 10px black}
 .rightBlurr {box-shadow: 10px 0 100px 10px black}
-#mainPicture {z-index: 1}
+#mainPicture {
+    height: 90vh;
+    width: 120vh;
+    z-index: 1
+}
 
 @media only screen and (max-width: 1024px) {
     #landing {
