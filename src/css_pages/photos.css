@@ -84,10 +84,6 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .App {
-        overflow-y: hidden !important
-    }
-
     #galleryMenu {
         left: 50vw;
         transform: translate(-65px,0)
@@ -110,7 +106,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .App {width: min-content}
+    .App {width: min-content !important}
 }
 
 @media only screen and (max-width: 374px) {

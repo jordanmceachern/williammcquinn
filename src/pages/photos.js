@@ -96,7 +96,7 @@ render(){
         j++
         return <img key={`${j}`} src={photo} alt="thumbnail" onClick={this.changeMain(j)}/>
     })
-    const seeMore = (this.state.loaded === true)? "show all":"load- ing..."
+    const seeMore = (this.state.loaded === true)? "show all": "menu"//"load- ing..."
 
     return (
         <div className="App">
