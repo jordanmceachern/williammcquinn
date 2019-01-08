@@ -10,6 +10,7 @@
 #leftPicture, #rightPicture {
     height: 80vh;
     width: 106.6vh;
+    min-width: 106.6vh;
     z-index: 0
 }
 
@@ -18,6 +19,7 @@
 #mainPicture {
     height: 90vh;
     width: 120vh;
+    min-width: 120vh;
     z-index: 1
 }
 
