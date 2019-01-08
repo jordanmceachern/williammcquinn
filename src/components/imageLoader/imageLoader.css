@@ -14,11 +14,7 @@
 
 .leftBlurr {box-shadow: -10px 0 100px 10px black}
 .rightBlurr {box-shadow: 10px 0 100px 10px black}
-#mainPicture {
-    height: 90vh;
-    width: 120vh;
-    z-index: 1
-}
+#mainPicture {z-index: 1}
 
 @media only screen and (max-width: 1024px) {
     #landing {
