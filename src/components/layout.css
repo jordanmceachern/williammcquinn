@@ -1,4 +1,4 @@
-* { height: 100%; margin: 0; padding: 0}
+* { height: 100%; margin: 0; padding: 0; overflow-y: hidden}
 
 @font-face {
     font-family: "noto-serif";
@@ -36,8 +36,9 @@ nav {
     z-index: 2;
     opacity: 1;
     top: 0;
+    left: 0;
     height: 50px;
-    width: 100%;
+    width: 100vw;
     box-shadow: 0 0 2px var(--main-font-color, black);
     display: flex;
     justify-content: space-evenly;

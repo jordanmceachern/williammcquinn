@@ -8,19 +8,23 @@
 }
 
 #leftPic, #rightPic {
-    height: 90%;
+    height: 80vh;
+    min-width: 120vh;
     z-index: 0
 }
 
 .leftBlur {box-shadow: -10px 0 100px 10px black}
 .rightBlur {box-shadow: 10px 0 100px 10px black}
-#mainPic {z-index: 1}
+#mainPic {
+    z-index: 1;
+    min-width: 150vh
+}
 
 #cycleRight {transform: rotate(180deg)}
 
 #galleryMenu {
     display: flex;
-    position: absolute;
+    position: fixed;
     margin: 0 auto;
     bottom: 15px;
     justify-content: space-evenly;
@@ -61,7 +65,7 @@
 }
 
 #gallery {
-    position: absolute;
+    position: fixed;
     bottom: 70px;
     height: 90px;
     width: 337.5px;
@@ -80,15 +84,33 @@
 }
 
 @media only screen and (max-width: 1024px) {
+    .App {
+        overflow-y: hidden !important
+    }
+
+    #galleryMenu {
+        left: 50vw;
+        transform: translate(-65px,0)
+    }
+
+    #gallery {
+        left: 50vw;
+        transform: translate(-168.75px,0)
+    }
+
     #photos {
+        height: 100vh;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        overflow-y: scroll;
-        overflow-x: scroll
+        overflow-x: visible;
+        overflow-y: hidden
     }
     
     #leftPic, #rightPic {display: none}
+}
+
+@media only screen and (max-width: 600px) {
+    .App {width: min-content}
 }
 
 @media only screen and (max-width: 374px) {
