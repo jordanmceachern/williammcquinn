@@ -23,10 +23,11 @@
     color: white;
     font-size: 20px;
     display: inline-block;
-    margin-left: 10px
+    margin-left: 10px;
+    overflow-y: unset
 }
 
-#about p a div {width: min-content}
+#about p a div {width: min-content; overflow-y: unset}
 
 #about p a div:hover {box-shadow: 0 4px 4px -4px var(--main-font-color, white)}
 
