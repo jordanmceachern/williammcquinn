@@ -34,7 +34,7 @@ render(){
             </div>
             <Link id="home" to="/">{logoPlaceHolder}</Link>
             <Link className="heading mobile hideThis" to="/aboutme">about me</Link>
-            <Link className="heading mobile hideThis" to="/photos">stills</Link>
+            <Link className="heading mobile hideThis" to="/stills">stills</Link>
             <Link className="heading mobile hideThis" to="/videos">videos</Link>
             <Link className="heading mobile hideThis" to="/contact">contact</Link>
             <div id="facebook" className="heading mobile hideThis" onClick={this.toggleHandler}>
